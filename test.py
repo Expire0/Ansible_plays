@@ -1,6 +1,16 @@
-
 def test():
     print test
+
+
+Snippet code:
+    now = datetime.now()
+current_month = str(now.month)
+current_day = str(now.day)
+current_year = str(now.year)
+
+print current_month  + "/" + current_day + "/" + current_year
+
+
 
 
 import sqlite3 as lite
