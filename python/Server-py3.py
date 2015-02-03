@@ -1,5 +1,11 @@
 #sample code to run a server using python 3 
 #https://docs.python.org/3/library/http.server.html
+#python files are served from /cgi-bin 
+#required heading for python files 
+'''
+print('Content-type: text/html\n')
+print('<title>Hello World</title>')
+'''
 
 
 from http.server import CGIHTTPRequestHandler, HTTPServer
