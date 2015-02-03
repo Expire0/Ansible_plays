@@ -1,6 +1,4 @@
-#geektrainer
-#or https://docs.python.org/2/library/simplehttpserver.html
-
+#sample code to run a server using Flask
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
