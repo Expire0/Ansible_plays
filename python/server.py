@@ -1,5 +1,5 @@
-geektrainer
-or https://docs.python.org/2/library/simplehttpserver.html
+#geektrainer
+#or https://docs.python.org/2/library/simplehttpserver.html
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
