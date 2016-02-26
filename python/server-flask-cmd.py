@@ -1,4 +1,4 @@
-#sample code to run a server using Flask and executing a local command
+#sample code to run a server using Flask and display the data via a webpage
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 from flask import Flask
 import subprocess
@@ -8,12 +8,11 @@ wsgi_app = app.wsgi_app
 
 @app.route('/')
 def hello():
-    cmd = ["ls"]
+    cmd = ["df", "-h"]
     proc = subprocess.Popen(cmd,stdout =subprocess.PIPE,
-            stderr=subprocess.PIPE,stdin=subprocess.PIPE)
+            stderr=subprocess.PIPE,stdin=subprocess.PIPE) #using stdout to capture the output 
     output, status = proc.communicate()
-    print  output
-    return output
+    return "<pre> %s </pre>"  % output  #keeping the ouput the same 
 
 if __name__ == '__main__':
     import os
@@ -23,3 +22,4 @@ if __name__ == '__main__':
     except ValueError:
         PORT = 5555
     app.run(HOST, PORT)
+##run with ./filename 
