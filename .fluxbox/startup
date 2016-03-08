@@ -14,6 +14,10 @@ xmodmap "/home/mas/.Xmodmap"
 # wmnd &
 # wmsmixer -w &
 # idesk &
+#tint2 & 
+fbsetbg -f /home/mas/Pictures/Fc6-wallpaper.png
+(sleep 10s && tint2 -c /etc/xdg/tint2/tint2rc) &
+(sleep 3s && tint2 -c /usr/local/bin/tint2launchers/tint2rcallbtm) &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
