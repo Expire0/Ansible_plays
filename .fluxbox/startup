@@ -15,7 +15,8 @@ xmodmap "/home/mas/.Xmodmap"
 # wmsmixer -w &
 # idesk &
 #tint2 & 
-fbsetbg -f /home/mas/Pictures/Fc6-wallpaper.png
+fbsetbg -f /home/mas/Pictures/Fc6-wallpaper.png   #change per the user setup 
+# local user config /home/<user>/.config/tint2/tint2rc
 (sleep 10s && tint2 -c /etc/xdg/tint2/tint2rc) &
 (sleep 3s && tint2 -c /usr/local/bin/tint2launchers/tint2rcallbtm) &
 
