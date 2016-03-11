@@ -1,0 +1,25 @@
+In apache's httpd.conf, you should enable these lines:
+
+LoadModule auth_module modules/mod_auth.so
+AddModule mod_auth.c
+
+and define an authentication realm for your cgi directory, like this:
+
+<Directory /var/www/cgi-bin>
+Options ExecCGI
+Order allow,deny
+Allow from all
+AuthType Basic
+AuthName "World Administration"
+AuthUserFile /etc/httpd/conf/htpasswd
+require valid-user
+Satisfy all
+</Directory>
+
+In Perl, if you use CGI.pm, there's an attribute providing that value.
+Just check if this little CGI-script works for you:
+
+#!/usr/bin/perl -w
+use CGI;
+my $q=new CGI;
+print $q->header,"You are user ",$q->remote_user;
