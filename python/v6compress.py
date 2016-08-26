@@ -6,7 +6,7 @@ import ipaddress
 import sys
 
 
-with open('mas2') as mas:
+with open('<file>') as mas:
     v6 = mas.read().splitlines()
     for i in v6:
         hey = ipaddress.ip_address(i)
