@@ -7,7 +7,7 @@ import sys
 
 
 with open('<file>') as mas:
-    v6 = mas.read().splitlines()
+    v6 = mas.read().splitlines()  #remove newline \n 
     for i in v6:
         hey = ipaddress.ip_address(i)
         print(hey.compressed)
