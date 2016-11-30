@@ -1,3 +1,31 @@
+###   check for running process
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 30 00:07:07 2016
+
+@author: mas
+"""
+
+#!/usr/bin/env python3
+
+import re
+import subprocess
+
+check="/usr/bin/spyder3"
+
+def is_running(process):
+
+    s = subprocess.Popen(["ps", "axw"],stdout=subprocess.PIPE)
+    for x in s.stdout:
+        print(x)
+        
+    
+is_running("meta")
+
+##############
+
+
 
 sample run command 
 
