@@ -1,6 +1,19 @@
 
+sample run command 
 
+#!/usr/bin/bash
 
+mas=0
+run='/usr/bin/date'
+
+rm -rf check
+while [ $mas -lt 10 ] ; do
+       $run >> check  
+       sleep 5
+done
+
+###
+python 
 
 ### run a backgroup process and send the stout to a file.   Use the file for a status update and delete 
 
