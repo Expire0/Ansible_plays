@@ -3,7 +3,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Nov 30 00:07:07 2016
-
 @author: mas
 """
 
@@ -12,16 +11,18 @@ Created on Wed Nov 30 00:07:07 2016
 import re
 import subprocess
 
-check="/usr/bin/spyder3"
+check="./run.sh"
 
 def is_running(process):
 
     s = subprocess.Popen(["ps", "axw"],stdout=subprocess.PIPE)
     for x in s.stdout:
-        print(x)
-        
+        if process in x:
+            print("yes")
+        else:
+            print("no")
     
-is_running("meta")
+is_running(b"/usr/sbin/chronyd")
 
 ##############
 
