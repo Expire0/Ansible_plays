@@ -65,3 +65,24 @@ code= subprocess.call(["./run.sh & "],shell=True)
 #code= subprocess.call(["tail -f check "],shell=True)
 
 print(mas)
+
+
+
+##### list log files and output 
+
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec  7 04:36:15 2016
+
+@author: mas
+"""
+
+import os 
+
+
+p = os.listdir('/var/log/')
+
+
+for i in p:
+    if 'Xorg' in i:
+        print(i)
