@@ -46,6 +46,7 @@ done
 python 
 
 ### run a backgroup process and send the stout to a file.   Use the file for a status update and delete 
+### http://stackoverflow.com/questions/1996518/retrieving-the-output-of-subprocess-call
 
 #!/usr/bin/env python3
 
