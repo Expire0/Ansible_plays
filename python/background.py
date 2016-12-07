@@ -69,6 +69,8 @@ print(mas)
 
 
 ##### list log files and output 
+### To do  run a process and grab the standout when running the apiscripter we will need the log number ###
+##then use this log number to locate the log files and output the contents ###
 
 # -*- coding: utf-8 -*-
 """
