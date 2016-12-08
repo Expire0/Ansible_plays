@@ -1,0 +1,45 @@
+#by endel /endel@tlen.pl/
+background yes
+
+use_xft yes
+# xft font when Xft is enabled
+xftfont kroeger 05_55 caps:size=7
+override_utf8_locale yes
+
+# Text alpha when using Xft
+xftalpha 1
+
+update_interval 1
+use_xft yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders no
+border_margin 2
+border_width 1
+default_color 779dae
+default_shade_color black
+default_outline_color grey
+own_window yes
+own_window_transparent no
+own_window_type normal
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager
+own_window_colour 000000
+alignment top_left
+#alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+gap_x 0
+gap_y 3
+no_buffers yes
+uppercase no
+double_buffer yes
+use_spacer no
+minimum_size 1280 0
+mail_spool $HOME/Maildir/
+
+
+
+TEXT
+    ${font} Cpu: ${color E7E7E7}${font}	${cpubar 4,50}	${color} Mem: ${color E7E7E7}${font}	${membar 4,50}${color}	| Net: ${color E7E7E7}${font}	${downspeed eth0} Kb/s ${color}	${totaldown eth0} down${color}	| ${color E7E7E7}	${upspeed eth0} Kb/s ${color}	${totalup eth0} up${color}	|  Root: ${color E7E7E7}${font}	${fs_free /} ${color}	Home: ${color E7E7E7}${font}	${fs_free /home} ${color}	| Email: ${color E7E7E7}	${execi 60 perl ~/Skrypty/gmail.pl n} new messages ${color}	| Weather:  ${color E7E7E7}${font}	${execi 1800 $HOME/Skrypty/pogodynka.sh}${color}	| Top:  ${color E7E7E7}${font}	${top name 1}${top name 2}
+${voffset -11}${alignr 10}${color E7E7E7}${time %e} ${color}${time %B}

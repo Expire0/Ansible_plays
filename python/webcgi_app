@@ -1,0 +1,31 @@
+#!/usr/bin/python 
+## reference http://www.tutorialspoint.com/python/python_cgi_programming.htm
+import cgi,cgitb
+import sys
+print "Content-Type: text/html; charset=utf-8\n\n";
+allcos = open("cos.txt", 'r')
+#mas = input("Enter model: ")
+#mas1 = input("Service Type: ") 
+
+form = cgi.FieldStorage()
+mas =form.getvalue('mas')
+mas1 =form.getvalue('mas1')
+
+
+print "Content-type:text/html\r\n\r\n"
+print "<html>"
+print "<head>"
+print "<title>Hello - Second CGI Program</title>"
+print "</head>"
+print "<body>"
+print "<h2>Hello %s %s</h2>" % (mas, mas1)
+print "</body>"
+print "</html>"
+
+
+for line in allcos:
+   # line = str(line)
+    if  form.getvalue('mas') in line and form.getvalue('mas1') in line:
+        print"%s" % line
+        print
+allcos.close()
