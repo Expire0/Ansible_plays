@@ -4,7 +4,7 @@ CSA modules
 ## output the log data if any
 
 1. need to combine them into functions 
-2. I hate UI, but this tool requires a UI . Jquery/html5?
+2. I hate UI, but this tool requires a UI . Jquery/html5/bootstrap?
 
 ##components 
 run.sh - sample process to run 
