@@ -3,6 +3,7 @@
 ## Developed by Mas Walls 
 ## updated 12/13/16
 ## clean up files  that are more than 5 days old. 
+## Test case , create some empty dummy files using touch -d -5days filename
 
 from os import path
 from datetime import datetime, timedelta
