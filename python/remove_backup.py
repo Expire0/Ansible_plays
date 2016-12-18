@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 
 ## Developed by Mas Walls 
-## updated 12/13/16
+## updated 12/18/16
 ## clean up files  that are more than 5 days old. 
 ## Test case , create some empty dummy files using touch -d -5days filename
 
@@ -10,20 +10,9 @@ from datetime import datetime, timedelta
 from os import listdir
 from os import remove
 
-
-route = "/var/backup/ldap/"
-
-days_ago = datetime.now() - timedelta(days=5)
-
-###logging 
-filename = '/var/backup/scripts/clean.log'
-file = open(filename,'a')
-
-
-
 ####
 
-def check(dir=route, idstring="openldap", file=file):
+def check(dir, idstring, file):
 	check = listdir(dir)
 	for i in check:
      		if idstring in i:
@@ -36,4 +25,11 @@ def check(dir=route, idstring="openldap", file=file):
 	file.close()
 
 if __name__ == '__main__':
-	check()
+
+	route = "/var/sandbox/garbage/"
+	days_ago = datetime.now() - timedelta(days=5)
+	###logging 
+	filename = '/var/log/fileCleanup.log'
+	file = open(filename,'a')
+	idstring = "test"
+	check(route, idstring, file)
