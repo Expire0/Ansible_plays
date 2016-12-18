@@ -9,6 +9,8 @@ from os import path
 from datetime import datetime, timedelta
 from os import listdir
 from os import remove
+from shutil import rmtree
+import os
 
 ####
 
@@ -24,12 +26,31 @@ def check(dir, idstring, file):
              			remove(dir + i)
 	file.close()
 
+
+def directory():
+      for root, dirs, files in os.walk("/home/mas/Documents", topdown=False):
+   
+          for name in dirs:
+              #print(os.path.join(root, name))
+              if "test" in name:
+                  found =os.path.join(root, name)
+                  # print("Found " + found)
+                  get = os.path.getmtime(found)
+                  get1 = datetime.fromtimestamp(get).strftime('%Y-%m-%d')
+                  print("found " + found + "with a timestamp of " + get1)
+                  days_ago = datetime.now() - timedelta(days=0)
+                  if get1 <  str(days_ago):
+                     #rmtree(found)
+                     print ("Removing files older then 5 days " + found)
+
+
 if __name__ == '__main__':
 
-	route = "/var/sandbox/garbage/"
-	days_ago = datetime.now() - timedelta(days=5)
+	route = "/home/mas/Documents/"
+	days_ago = datetime.now() - timedelta(days=0)
 	###logging 
 	filename = '/var/log/fileCleanup.log'
 	file = open(filename,'a')
 	idstring = "test"
-	check(route, idstring, file)
+#check(route, idstring, file)
+#directory()
