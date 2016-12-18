@@ -21,10 +21,9 @@ def check(dir, idstring, file):
          		get = path.getmtime(dir + i)
          		get1 = datetime.fromtimestamp(get).strftime('%Y-%m-%d')
          		if get1 <  str(days_ago):
-             			print ("Removing files older then 5 days " + i)
+             			print "Removing files older then 5 days " + i
              			file.write("Removing files older then 5 days " + i + "\n")
-             			## remove hash in front of the below to activate
-                                remove(dir + i)
+             			remove(dir + i)
 	file.close()
 
 
@@ -41,7 +40,6 @@ def directory():
                   print("found " + found + "with a timestamp of " + get1)
                   days_ago = datetime.now() - timedelta(days=0)
                   if get1 <  str(days_ago):
-                     ## remove hash in front of the below to activate
                      #rmtree(found)
                      print ("Removing files older then 5 days " + found)
 
@@ -49,10 +47,10 @@ def directory():
 if __name__ == '__main__':
 
 	route = "/home/mas/Documents/"
-	days_ago = datetime.now() - timedelta(days=5)
+	days_ago = datetime.now() - timedelta(days=0)
 	###logging 
 	filename = '/var/log/fileCleanup.log'
 	file = open(filename,'a')
-	idstring = "mas"
-check(route, idstring, file)
+	idstring = "test"
+#check(route, idstring, file)
 #directory()
