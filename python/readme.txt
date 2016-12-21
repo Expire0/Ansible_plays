@@ -24,6 +24,9 @@ foo==>4.5
 or 
 foo 
 
+http://conda.pydata.org/docs/intro.html
+Conda is a package manager application that quickly installs, runs, and updates packages and their dependencies. The conda command is the primary interface for managing installations of various packages. It can query and search the package index and current installation, create new environments, and install and update packages into existing conda environments. See our Using conda section for more information.
+
 
 Package index 
 https://pypi.python.org/pypi
