@@ -6,7 +6,7 @@ Python modules used most often
 
 
 packaging 
-
+http://docs.python-guide.org/en/latest/dev/virtualenvs/
 http://setuptools.readthedocs.io/en/latest/setuptools.html#installing-setuptools
 
 http://python-packaging.readthedocs.io/en/latest/command-line-scripts.html
