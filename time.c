@@ -21,3 +21,23 @@ int main(){
         else
                 printf("false");
 }
+
+
+
+/* 
+https://github.com/balabit-deps/balabit-os-6-util-linux/blob/18ecbf6e3c975d642b7c7282fe447ce7a8313884/sys-utils/rtcwake.c
+
+
+
+balabit-deps/balabit-os-6-util-linux – rtcwake.c
+Showing the top two matches Last indexed on Mar 6
+84		enum clock_modes clock_mode;	/* hwclock timezone */
+85		time_t sys_time;		/* system time */
+86		time_t rtc_time;		/* hardware time */
+…	
+176		/* Convert rtc_time to normal arithmetic-friendly form,
+177		 * updating tm.tm_wday as used by asctime().
+178		 */
+179		tm.tm_sec = rtc.tm_sec;
+
+*/
