@@ -2,7 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 
-/* Reference http://en.cppreference.com/w/c/chrono/asctime  */
+/* Reference http://en.cppreference.com/w/c/chrono/asctime 
+https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.2.html#strings
+*/
 
 int main(){
 
