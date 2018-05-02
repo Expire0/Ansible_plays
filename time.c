@@ -13,4 +13,11 @@ int main(){
         printf("%s\n", test);
         printf("UTC:%s", asctime(localtime(&result)));  /* print the current OS time. */
         printf("%s" ,  os_c);
+
+
+
+        if (os_c > asctime(localtime(&result)))
+                printf("true");
+        else
+                printf("false");
 }
