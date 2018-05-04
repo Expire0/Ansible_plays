@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Reference http://en.cppreference.com/w/c/chrono/asctime 
+/* Reference http://en.cppreference.com/w/c/chrono/asctime
  * https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.2.html#strings
- * https://blog.udemy.com/c-string-to-int/  
+ * https://blog.udemy.com/c-string-to-int/
  * */
 int main() {
 	FILE *ls = popen("/usr/sbin/hwclock --show | awk '{print $5 }' | egrep -o \"[0-6][0-9]:[0-6][0-9]:\" | sed \'s/://g\' ", "r");
@@ -17,7 +17,7 @@ int main() {
 pclose(ls);
     // char os_c = system("date +%I:%M:%S");
 
-      // check system time 
+      // check system time
       FILE *os_time = popen("date +%I%M", "r");
         char buf1[256];
         while (fgets(buf1, sizeof(buf1), os_time) != 0) {
@@ -31,7 +31,7 @@ int b = atoi(buf1);
 if (b < a){
         int min = a - b ;
 	//printf("The system clock is behind %d %d\n" , a, b);
-        printf("The system clock is behind by %d minutes :\n" , min); 
+        printf("The system clock is behind by %d minutes :\n" , min);
 }
 else {
 	printf("All good ");
