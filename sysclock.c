@@ -9,7 +9,9 @@
 
 int main() {
 
-char hour[6];
+int hour[10];
+
+int htime;
 
 int n=0;
 
@@ -20,13 +22,18 @@ FILE *ls = popen("/usr/sbin/hwclock -r", "r");
         //printf("System Time : %s", buf);
             for (int i=11; i < 17; i++) {
        // printf("%c", buf[i]);
+
                  hour[n] = buf[i];
                   n = n + 1;
     }
 }
 
+
 pclose(ls);
 
-printf("%c%c%c%c" , hour[0],hour[1],hour[3],hour[4]);
+printf("%c%c%c%c\n" , hour[0],hour[1],hour[3],hour[4]);
+
+
+
 
 }
