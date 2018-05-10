@@ -9,13 +9,7 @@
 
 int main() {
 
-int hour[50];
-
-int htime;
-
-int n=0;
-
-int i;
+int hour[50], htime , n=0 , i;
 
 FILE *ls = popen("/usr/sbin/hwclock -r", "r");
 	char buf[256];
@@ -45,5 +39,7 @@ int z = hour[20] - '0';
 htime= r * 1000 + x * 100 + y * 10 + z;
 
 printf("%i\n", htime);
+
+//start comparision to os clock
 
 }
