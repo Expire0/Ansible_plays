@@ -1,5 +1,6 @@
 
 # parse log into list and search by date. 
+#library for csa 
 
 log = open('csa_log.log' , 'r')
 
