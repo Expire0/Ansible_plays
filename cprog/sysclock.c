@@ -5,7 +5,7 @@
 #include <linux/rtc.h>
 
 
-
+//check hardware clock and sys clock 
 
 int main() {
 
