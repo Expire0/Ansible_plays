@@ -64,5 +64,6 @@ if (htime == stime) {
 else if (stime != htime)  {
 	printf("%s" , "The OS clock is not in sync with the HWclock\n");
 }
-
+// start second conversion 
+	
 }
