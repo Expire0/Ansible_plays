@@ -65,5 +65,9 @@ else if (stime != htime)  {
 	printf("%s" , "The OS clock is not in sync with the HWclock\n");
 }
 // start second conversion 
-	
+//Get seconds
+//min * 60(minutes in a hour)
+//total seconds for 24 hour format 
+//time * 3600
+//formula .. need to compare the time then minutes . 
 }
