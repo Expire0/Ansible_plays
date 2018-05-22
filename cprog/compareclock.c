@@ -37,7 +37,8 @@ int z = hour[46] - '0';
 
 //putting the int together
 htime= r * 1000 + x * 100 + y * 10 + z;
-
+int htimeH = r * 10 + x;
+int htimeM = y * 10 + z;
 printf("%i\n", htime);
 
 //start comparision to os clock
@@ -57,17 +58,26 @@ int c = buf1[2] - '0';
 int d = buf1[3] - '0';
 
 stime= a * 1000 + b * 100 + c * 10 + d;
+int stimeH = a * 10 + b;
+int stimeM = c * 10 + d;
 if (htime == stime) {
 	printf("%s", "The SYS clock and HWclock are in sync\n");
 
 }
 else if (stime != htime)  {
 	printf("%s" , "The OS clock is not in sync with the HWclock\n");
+	if (htimeH != stimeH) {
+		printf("%s%i", "The hour is off",stimeH);
+	}
+	else if (stimeM < htimeM) {
+        	printf("%s", "The min is off");
+	}
+
+
+
 }
-// start second conversion 
-//Get seconds
-//min * 60(minutes in a hour)
-//total seconds for 24 hour format 
-//time * 3600
-//formula .. need to compare the time then minutes . 
+
 }
+
+
+
