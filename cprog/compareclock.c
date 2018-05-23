@@ -11,6 +11,14 @@ int main() {
 
 int hour[50], htime , stime, n=0 , i;
 
+char clean1[100];
+
+
+//clean existing temp file 
+FILE *prep = popen("rm -rf /var/tmp/fixclock.txt", "r");
+
+
+// check hardware clock and add stdout to array
 FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
 	char buf[256];
         while (fgets(buf, sizeof(buf), ls) != 0) {
@@ -27,7 +35,7 @@ FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
 pclose(ls);
 
 //for testing only.
-printf("Testing Sysclock with Char %c%c%c%c\n" , hour[42],hour[43],hour[45],hour[46]);
+//printf("Testing Sysclock with Char %c%c%c%c\n" , hour[42],hour[43],hour[45],hour[46]);
 
 //converting char to int
 int r = hour[42] - '0';
@@ -35,11 +43,11 @@ int x = hour[43] - '0';
 int y = hour[45] - '0';
 int z = hour[46] - '0';
 
-//putting the int together
+//putting the int together . printing htime is for debugging only
 htime= r * 1000 + x * 100 + y * 10 + z;
 int htimeH = r * 10 + x;
 int htimeM = y * 10 + z;
-printf("%i\n", htime);
+//printf("%i\n", htimeM);
 
 //start comparision to os clock
 
@@ -47,7 +55,8 @@ printf("%i\n", htime);
 FILE *os_time = popen("date -u +%H%M", "r");
 char buf1[256];
 while (fgets(buf1, sizeof(buf1), os_time) != 0) {
-    printf("OS Time : %s", buf1);
+     //print char fro array- not needed unless debugging
+	//printf("OS Time : %s", buf1);
 
 }
 pclose(os_time);
@@ -60,6 +69,7 @@ int d = buf1[3] - '0';
 stime= a * 1000 + b * 100 + c * 10 + d;
 int stimeH = a * 10 + b;
 int stimeM = c * 10 + d;
+//printf("%i",stimeM);
 if (htime == stime) {
 	printf("%s", "The SYS clock and HWclock are in sync\n");
 
@@ -67,10 +77,15 @@ if (htime == stime) {
 else if (stime != htime)  {
 	printf("%s" , "The OS clock is not in sync with the HWclock\n");
 	if (htimeH != stimeH) {
-		printf("%s%i", "The hour is off",stimeH);
+		printf("%s", "The hour is off\n");
 	}
-	else if (stimeM < htimeM) {
-        	printf("%s", "The min is off");
+	else if (htimeM > stimeM) {
+		int timeD = htimeM - stimeM;
+		int timeF = htimeH - 4;
+        	printf("%s%i%s", "The min is off by ", timeD , " minutes.\n");
+		int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",timeF,htimeM);
+		FILE *FIX2 = popen(clean1, "r");
+		FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
 	}
 
 
@@ -78,6 +93,4 @@ else if (stime != htime)  {
 }
 
 }
-
-
 
