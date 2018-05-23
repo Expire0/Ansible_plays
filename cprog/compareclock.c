@@ -4,7 +4,7 @@
 #include <string.h>
 #include <linux/rtc.h>
 
-//the program will save a temp file to the FS if the clock needed to be updated. 
+
 //check hardware clock and sys clock 
 
 int main() {
