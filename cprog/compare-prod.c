@@ -88,6 +88,15 @@ else if (stime != htime)  {
 		FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
 	}
 
+       else if (htimeM < stimeM) {
+                int timeD = stimeM - htimeM;
+        //      int timeF = htimeH - 4;
+                printf("%s%i%s", "The min is off by ", timeD , " minutes.\n");
+                int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
+                FILE *FIX2 = popen(clean1, "r");
+                FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
+        }
+
 
 
 }
