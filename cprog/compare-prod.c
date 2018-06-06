@@ -15,7 +15,7 @@ char clean1[100];
 
 
 //clean existing temp file 
-FILE *prep = popen("rm -rf /var/tmp/fixclock.txt", "r");
+FILE *prep = popen("rm -rf /var/tmp/check_clock.txt", "r");
 
 
 // check hardware clock and add stdout to array
@@ -75,26 +75,35 @@ if (htime == stime) {
 
 }
 else if (stime != htime)  {
-	printf("%s" , "The OS clock is not in sync with the HWclock\n");
-	if (htimeH != stimeH) {
-		printf("%s", "The hour is off\n");
-	}
-	else if (htimeM > stimeM) {
+	printf("%s" , "The OS and HW clocks are not in sync.\n");
+	//consider removing this check
+//	if (htimeH != stimeH) {
+//		printf("%s", "The hour is off and needed to be fixed. \n");
+//		FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
+//	}
+        
+	if  (htimeM > stimeM) {
 		int timeD = htimeM - stimeM;
 	//	int timeF = htimeH - 4;
-        	printf("%s%i%s", "The min is off by ", timeD , " minutes.\n");
-		int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
-		FILE *FIX2 = popen(clean1, "r");
-		FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
-	}
+	        if (timeD > 3) {
+        		printf("%s%i%s", "The hwCLOCK ahead of the sysclock by ", timeD , " minutes.\n");
+			int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
+			FILE *FIX2 = popen(clean1, "r");
+			FILE *temp = popen("touch /var/tmp/check_clock.txt" , "r");
+	
+		}
+		}
 
        else if (htimeM < stimeM) {
                 int timeD = stimeM - htimeM;
         //      int timeF = htimeH - 4;
-                printf("%s%i%s", "The min is off by ", timeD , " minutes.\n");
-                int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
-                FILE *FIX2 = popen(clean1, "r");
-                FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
+		if (timeD > 3) {
+                	printf("%s%i%s", "The HWCLOCK behind the sysclock by ", timeD , " minutes.\n");
+               // 	int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
+	                int fix1 = snprintf(clean1, sizeof(clean1), "hwclock --systohc");
+                	FILE *FIX2 = popen(clean1, "r");
+                	FILE *temp = popen("touch /var/tmp/check_clock.txt" , "r");
+		}
         }
 
 
