@@ -6,7 +6,7 @@
 
 
 //check hardware clock and sys clock 
-
+//check if ntpdate -d  will be a better fix command. then hwclock or date -s
 int main() {
 
 int hour[50], htime , stime, n=0 , i;
@@ -19,7 +19,8 @@ FILE *prep = popen("rm -rf /var/tmp/check_clock.txt", "r");
 
 
 // check hardware clock and add stdout to array
-FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
+// change verbose to debug for older systems
+FILE *ls = popen("/usr/sbin/hwclock --debug | grep read", "r");
 	char buf[256];
         while (fgets(buf, sizeof(buf), ls) != 0) {
         //printf("System Time : %s", buf);
