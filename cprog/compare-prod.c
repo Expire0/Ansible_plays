@@ -7,6 +7,8 @@
 
 //check hardware clock and sys clock 
 //check if ntpdate -d  will be a better fix command. then hwclock or date -s
+//issue 1 what happens if the system time is completely wrong?
+//check ntp status on old servers and chronyd on new. 
 int main() {
 
 int hour[50], htime , stime, n=0 , i;
@@ -20,7 +22,7 @@ FILE *prep = popen("rm -rf /var/tmp/check_clock.txt", "r");
 
 // check hardware clock and add stdout to array
 // change verbose to debug for older systems
-FILE *ls = popen("/usr/sbin/hwclock --debug | grep read", "r");
+FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
 	char buf[256];
         while (fgets(buf, sizeof(buf), ls) != 0) {
         //printf("System Time : %s", buf);
@@ -76,34 +78,38 @@ if (htime == stime) {
 
 }
 else if (stime != htime)  {
-	printf("%s" , "The OS and HW clocks are not in sync.\n");
+	printf("%s" , "The OS and HW clocks are not in sync.The sync is within the threshold\n");
 	//consider removing this check
 //	if (htimeH != stimeH) {
 //		printf("%s", "The hour is off and needed to be fixed. \n");
 //		FILE *temp = popen("touch /var/tmp/fixclock.txt" , "r");
 //	}
-        
+       // if the hardware clock is higher. how do we verify if the clock is correct 
 	if  (htimeM > stimeM) {
 		int timeD = htimeM - stimeM;
-	//	int timeF = htimeH - 4;
-	        if (timeD > 3) {
-        		printf("%s%i%s", "The hwCLOCK ahead of the sysclock by ", timeD , " minutes.\n");
-			int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
+		//need time offset if the system time is not utc
+		int timeF = htimeH - 4;
+	        if (timeD > 10) {
+        		printf("%s%i%s", "The hwCLOCK ahead of the sysclock by ", timeD , " minutes.Self correcting\n");
+			int fix1 = snprintf(clean1, sizeof(clean1), "hwclock --systohc");
 			FILE *FIX2 = popen(clean1, "r");
 			FILE *temp = popen("touch /var/tmp/check_clock.txt" , "r");
+			FILE *temp2 = popen("echo $(date) The clock was off by more then 10 minutes >> /var/tmp/clock.log" , "r");
 	
 		}
 		}
-
-       else if (htimeM < stimeM) {
+       //  possible patch for minutes in the 50 range (if htimeM < 50 &&  htimeM < stimeM)
+       //  original line (htimeM < stimeM)
+       else if (htimeM < stimeM)  {
                 int timeD = stimeM - htimeM;
-        //      int timeF = htimeH - 4;
-		if (timeD > 3) {
-                	printf("%s%i%s", "The HWCLOCK behind the sysclock by ", timeD , " minutes.\n");
+              int timeF = htimeH - 4;
+		if (timeD > 10) {
+                	printf("%s%i%s", "The HWCLOCK behind the sysclock by ", timeD , " minutes.Self Correcting\n");
                // 	int fix1 = snprintf(clean1, sizeof(clean1), "date -s \"%d:%d\"",htimeH,htimeM);
 	                int fix1 = snprintf(clean1, sizeof(clean1), "hwclock --systohc");
                 	FILE *FIX2 = popen(clean1, "r");
                 	FILE *temp = popen("touch /var/tmp/check_clock.txt" , "r");
+			FILE *temp2 = popen("echo $(date) The clock was off by more then 10 minutes >> /var/tmp/clock.log" , "r");
 		}
         }
 
