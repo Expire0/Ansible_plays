@@ -5,8 +5,6 @@
 #include <linux/rtc.h>
 
 
-
-//https://www.techonthenet.com/c_language/standard_library_functions/string_h/strcmp.php
 //check hardware clock and sys clock 
 //check if ntpdate -d  will be a better fix command. then hwclock or date -s
 //issue 1 what happens if the system time is completely wrong?
