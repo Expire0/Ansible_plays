@@ -22,7 +22,7 @@ FILE *prep = popen("rm -rf /var/tmp/check_clock.txt", "r");
 
 // check hardware clock and add stdout to array
 // change verbose to debug for older systems
-FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
+FILE *ls = popen("/usr/sbin/hwclock --debug | grep read", "r");
 	char buf[256];
         while (fgets(buf, sizeof(buf), ls) != 0) {
         //printf("System Time : %s", buf);
@@ -38,42 +38,42 @@ FILE *ls = popen("/usr/sbin/hwclock --verbose | grep read", "r");
 pclose(ls);
 // validate is ntp or chronyd is running . 
 
-FILE *pre1 = popen("systemctl status chronyd | grep running", "r");
+FILE *pre1 = popen("systemctl status ntpd | grep running", "r");
         
         while (fgets(precheck1, sizeof(precheck1), ls) != 0) {
 //        printf("Chronyd is  : %c%c%c%c%c%c%c", precheck1[19],precheck1[20],precheck1[21],precheck1[22],precheck1[23],precheck1[24],precheck1[25]); 
          char precheck2[50];
-   int live = snprintf(precheck2, sizeof(precheck2),  "Chronyd is: %c%c%c%c%c%c%c", precheck1[19],precheck1[20],precheck1[21],precheck1[22],precheck1[23],precheck1[24],precheck1[25]);
+   int live = snprintf(precheck2, sizeof(precheck2),  "NTP is: %c%c%c%c%c%c%c", precheck1[19],precheck1[20],precheck1[21],precheck1[22],precheck1[23],precheck1[24],precheck1[25]);
 // compare the output string 
         char out2[50];
 	char out3[50];
 	int rel;
-	strcpy(out2, "Chronyd is: running");
+	strcpy(out2, "NTP is: running");
 	strcpy(out3, "running");
 	rel = strcmp(out2, precheck2);
 	if (rel == 0) {
-            printf("Chronyd is running.  %d\n", rel); 
+            printf("NTP is running.  %d\n", rel); 
 	}
 }
 
 
 pclose(pre1);
 
-FILE *pre2 = popen("systemctl status chronyd | grep dead", "r");
+FILE *pre2 = popen("systemctl status ntpd | grep dead", "r");
 
         while (fgets(precheck1, sizeof(precheck1), ls) != 0) {
-        printf("Chronyd is: %c%c%c%c\n", precheck1[21],precheck1[22],precheck1[23],precheck1[24]); 
+        printf("NTP is: %c%c%c%c\n", precheck1[21],precheck1[22],precheck1[23],precheck1[24]); 
          char precheck2[50];
-   int live = snprintf(precheck2, sizeof(precheck2),  "Chronyd is: %c%c%c%c", precheck1[21],precheck1[22],precheck1[23],precheck1[24]);
+   int live = snprintf(precheck2, sizeof(precheck2),  "NTP is: %c%c%c%c", precheck1[21],precheck1[22],precheck1[23],precheck1[24]);
 // compare the output string 
         char out2[50];
         char out3[50];
         int rel;
-        strcpy(out2, "Chronyd is: dead");
+        strcpy(out2, "NTP is: dead");
         strcpy(out3, "running");
         rel = strcmp(out2, precheck2);
         if (rel == 0) {
-            printf("Chronyd is not running.Terminating application  %d\n", rel);
+            printf("NTP is not running.Terminating application  %d\n", rel);
 	    exit(0);
         }
 }
