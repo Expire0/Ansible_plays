@@ -11,14 +11,13 @@
 //check ntp status on old servers and chronyd on new. 
 int main() {
 
-int hour[50], htime , stime, n=0 , i;
+int hour[50], fixthis=0, htime , stime, n=0 , i;
 
 char clean1[100] , precheck1[100];
 
 
 //clean existing temp file 
 FILE *prep = popen("rm -rf /var/tmp/check_clock.txt", "r");
-
 
 // check hardware clock and add stdout to array
 // change verbose to debug for older systems
@@ -76,13 +75,15 @@ FILE *pre2 = popen("/etc/init.d/ntpd status ", "r");
         rel = strcmp(out2, precheck2);
         if (rel == 0) {
             printf("NTP is not running.Terminating application  %d\n", rel);
-            exit(0);
+            fixthis = fixthis + 1;
         }
 }
-
-
 pclose(pre2);
-
+if (fixthis == 1) {
+FILE *auto_15 = popen("/usr/sbin/ntpd ", "r");
+pclose(auto_15);
+exit(0);
+}
 //for testing only.
 //printf("Testing Sysclock with Char %c%c%c%c\n" , hour[42],hour[43],hour[45],hour[46]);
 
@@ -100,7 +101,6 @@ int htimeM = y * 10 + z;
 
 //start comparision to os clock
 
-
 FILE *os_time = popen("date -u +%H%M", "r");
 char buf1[256];
 while (fgets(buf1, sizeof(buf1), os_time) != 0) {
@@ -109,6 +109,7 @@ while (fgets(buf1, sizeof(buf1), os_time) != 0) {
 
 }
 pclose(os_time);
+
 
 int a = buf1[0] - '0';
 int b = buf1[1] - '0';
