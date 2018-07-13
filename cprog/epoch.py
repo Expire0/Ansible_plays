@@ -14,7 +14,7 @@ hmm =response.tx_time
 #print(hmm[11:-8])
 print(hmm)
 
-hmm2 = calendar.timegm(time.gmtime())
+hmm2 = calendar.timegm(time.gmtime()) #why use this when you can call time.time() ? 
 
 dt1 = datetime.datetime.fromtimestamp(hmm) # 1973-11-29 2i2:33:09
 dt2 = datetime.datetime.fromtimestamp(hmm2) # 1977-06-07 23:44:50
