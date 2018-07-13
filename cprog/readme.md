@@ -35,3 +35,5 @@ https://www.boost.org/
 https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 
 https://isocpp.org/
+
+https://akrzemi1.wordpress.com/2018/07/07/functions-in-std/
