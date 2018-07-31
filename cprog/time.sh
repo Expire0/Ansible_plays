@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-date -s "12:45"
+date -s "16:45"
 
 python3 demo.py
 
