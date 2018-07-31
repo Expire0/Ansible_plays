@@ -9,7 +9,7 @@ import dateutil.relativedelta
 #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
 
 c = ntplib.NTPClient()
-response = c.request('ntp-ch2-1p.sys.comcast.net')
+response = c.request('<server>')
 hmm =response.tx_time
 #print(hmm[11:-8])
 print(hmm)
