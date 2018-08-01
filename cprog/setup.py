@@ -2,5 +2,5 @@ from distutils.core import setup
 from Cython.Build import cythonize
 
 setup(
-    ext_modules = cythonize("demo_prod.py")
+    ext_modules = cythonize("mas123.py")
 )
