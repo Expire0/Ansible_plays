@@ -71,3 +71,7 @@ zip -r clock time.sh clock_lib/* demo_prod.py
 
 modified line 8 clock_lib/dateutil/relativedelta.py
 to from clock_lib.six import integer_types
+
+build out 
+mkdir -p prod
+rm clock.zip && zip -r clock time.sh clock_lib/* natprov_osclock.py natprov_ntp.py  natprov_synclock
