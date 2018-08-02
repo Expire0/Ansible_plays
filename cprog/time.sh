@@ -2,7 +2,7 @@
 
 date -s "16:45"
 
-python3 demo.py
+python3 natprov_ntp.py
 
 
 date 

@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "mas123",
+        "name": "natprov_ntp",
         "sources": [
-            "mas123.py"
+            "natprov_ntp.py"
         ]
     },
-    "module_name": "mas123"
+    "module_name": "natprov_ntp"
 }
 END: Cython Metadata */
 
@@ -570,8 +570,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__mas123
-#define __PYX_HAVE_API__mas123
+#define __PYX_HAVE__natprov_ntp
+#define __PYX_HAVE_API__natprov_ntp
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -776,7 +776,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "mas123.py",
+  "natprov_ntp.py",
 };
 
 /*--- Type declarations ---*/
@@ -1061,12 +1061,12 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'mas123' */
-#define __Pyx_MODULE_NAME "mas123"
-extern int __pyx_module_is_main_mas123;
-int __pyx_module_is_main_mas123 = 0;
+/* Module declarations from 'natprov_ntp' */
+#define __Pyx_MODULE_NAME "natprov_ntp"
+extern int __pyx_module_is_main_natprov_ntp;
+int __pyx_module_is_main_natprov_ntp = 0;
 
-/* Implementation of 'mas123' */
+/* Implementation of 'natprov_ntp' */
 static const char __pyx_k_c[] = "c";
 static const char __pyx_k_s[] = "-s";
 static const char __pyx_k__2[] = "@";
@@ -1097,7 +1097,6 @@ static const char __pyx_k_print[] = "print";
 static const char __pyx_k_format[] = "format";
 static const char __pyx_k_gmtime[] = "gmtime";
 static const char __pyx_k_import[] = "__import__";
-static const char __pyx_k_mas123[] = "mas123";
 static const char __pyx_k_ntplib[] = "ntplib";
 static const char __pyx_k_test_2[] = "__test__";
 static const char __pyx_k_timegm[] = "timegm";
@@ -1112,13 +1111,14 @@ static const char __pyx_k_response[] = "response";
 static const char __pyx_k_validate[] = "validate";
 static const char __pyx_k_NTPClient[] = "NTPClient";
 static const char __pyx_k_clock_lib[] = "clock_lib";
-static const char __pyx_k_mas123_py[] = "mas123.py";
 static const char __pyx_k_subprocess[] = "subprocess";
 static const char __pyx_k_basicConfig[] = "basicConfig";
 static const char __pyx_k_communicate[] = "communicate";
+static const char __pyx_k_natprov_ntp[] = "natprov_ntp";
 static const char __pyx_k_fromtimestamp[] = "fromtimestamp";
 static const char __pyx_k_relativedelta[] = "relativedelta";
 static const char __pyx_k_Time_is_synced[] = "Time is synced";
+static const char __pyx_k_natprov_ntp_py[] = "natprov_ntp.py";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_clock_lib_dateutil[] = "clock_lib.dateutil";
 static const char __pyx_k_asctime_s_message_s[] = "%(asctime)s %(message)s";
@@ -1163,9 +1163,9 @@ static PyObject *__pyx_n_s_level;
 static PyObject *__pyx_n_s_log;
 static PyObject *__pyx_n_s_logging;
 static PyObject *__pyx_n_s_main;
-static PyObject *__pyx_n_s_mas123;
-static PyObject *__pyx_kp_s_mas123_py;
 static PyObject *__pyx_n_s_minutes;
+static PyObject *__pyx_n_s_natprov_ntp;
+static PyObject *__pyx_kp_s_natprov_ntp_py;
 static PyObject *__pyx_kp_s_ntp_ch2_1p_sys_comcast_net;
 static PyObject *__pyx_n_s_ntplib;
 static PyObject *__pyx_n_s_os;
@@ -1185,7 +1185,7 @@ static PyObject *__pyx_n_s_time;
 static PyObject *__pyx_n_s_timegm;
 static PyObject *__pyx_n_s_tx_time;
 static PyObject *__pyx_n_s_validate;
-static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_11natprov_ntp_test(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_tuple_;
@@ -1193,7 +1193,7 @@ static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_codeobj__4;
 /* Late includes */
 
-/* "mas123.py":14
+/* "natprov_ntp.py":14
  * #https://stackoverflow.com/questions/12664295/ntp-client-in-python
  * #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
  * def test():             # <<<<<<<<<<<<<<
@@ -1202,20 +1202,20 @@ static PyObject *__pyx_codeobj__4;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6mas123_1test(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_6mas123_1test = {"test", (PyCFunction)__pyx_pw_6mas123_1test, METH_NOARGS, 0};
-static PyObject *__pyx_pw_6mas123_1test(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_11natprov_ntp_1test(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_11natprov_ntp_1test = {"test", (PyCFunction)__pyx_pw_11natprov_ntp_1test, METH_NOARGS, 0};
+static PyObject *__pyx_pw_11natprov_ntp_1test(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("test (wrapper)", 0);
-  __pyx_r = __pyx_pf_6mas123_test(__pyx_self);
+  __pyx_r = __pyx_pf_11natprov_ntp_test(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_11natprov_ntp_test(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_c = NULL;
   PyObject *__pyx_v_response = NULL;
   PyObject *__pyx_v_isntp = NULL;
@@ -1239,7 +1239,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   int __pyx_t_7;
   __Pyx_RefNannySetupContext("test", 0);
 
-  /* "mas123.py":15
+  /* "natprov_ntp.py":15
  * #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
  * def test():
  *     c = ntplib.NTPClient()   #create a object of the class             # <<<<<<<<<<<<<<
@@ -1272,7 +1272,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_c = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":16
+  /* "natprov_ntp.py":16
  * def test():
  *     c = ntplib.NTPClient()   #create a object of the class
  *     response = c.request('ntp-ch2-1p.sys.comcast.net')             # <<<<<<<<<<<<<<
@@ -1287,7 +1287,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_response = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mas123.py":17
+  /* "natprov_ntp.py":17
  *     c = ntplib.NTPClient()   #create a object of the class
  *     response = c.request('ntp-ch2-1p.sys.comcast.net')
  *     isntp =response.tx_time             # <<<<<<<<<<<<<<
@@ -1299,7 +1299,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_isntp = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "mas123.py":19
+  /* "natprov_ntp.py":19
  *     isntp =response.tx_time
  * 
  *     sub= "@"             # <<<<<<<<<<<<<<
@@ -1309,7 +1309,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __Pyx_INCREF(__pyx_kp_s__2);
   __pyx_v_sub = __pyx_kp_s__2;
 
-  /* "mas123.py":20
+  /* "natprov_ntp.py":20
  * 
  *     sub= "@"
  *     sub1 = sub + str(isntp)             # <<<<<<<<<<<<<<
@@ -1324,7 +1324,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_sub1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":22
+  /* "natprov_ntp.py":22
  *     sub1 = sub + str(isntp)
  * 
  *     isOS = calendar.timegm(time.gmtime()) #why use this when you can call time.time() ? --hel             # <<<<<<<<<<<<<<
@@ -1408,7 +1408,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_isOS = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":24
+  /* "natprov_ntp.py":24
  *     isOS = calendar.timegm(time.gmtime()) #why use this when you can call time.time() ? --hel
  * 
  *     dt1 = datetime.datetime.fromtimestamp(isntp) # 1973-11-29 2i2:33:09             # <<<<<<<<<<<<<<
@@ -1469,7 +1469,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_dt1 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":25
+  /* "natprov_ntp.py":25
  * 
  *     dt1 = datetime.datetime.fromtimestamp(isntp) # 1973-11-29 2i2:33:09
  *     dt2 = datetime.datetime.fromtimestamp(isOS) # 1977-06-07 23:44:50             # <<<<<<<<<<<<<<
@@ -1530,7 +1530,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_dt2 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":26
+  /* "natprov_ntp.py":26
  *     dt1 = datetime.datetime.fromtimestamp(isntp) # 1973-11-29 2i2:33:09
  *     dt2 = datetime.datetime.fromtimestamp(isOS) # 1977-06-07 23:44:50
  *     rd = relativedelta.relativedelta(dt2, dt1)             # <<<<<<<<<<<<<<
@@ -1590,7 +1590,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_rd = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":32
+  /* "natprov_ntp.py":32
  *     #logging config
  * 
  *     validate = rd.minutes             # <<<<<<<<<<<<<<
@@ -1602,7 +1602,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __pyx_v_validate = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "mas123.py":34
+  /* "natprov_ntp.py":34
  *     validate = rd.minutes
  * 
  *     if validate < -1 :             # <<<<<<<<<<<<<<
@@ -1614,7 +1614,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_7) {
 
-    /* "mas123.py":37
+    /* "natprov_ntp.py":37
  *     #    print(" %d hours, %d minutes and %d seconds" % (rd.hours, rd.minutes, rd.seconds))
  *     #    print("Time is out of sync & self correctng ")
  *         code =Popen(["date", "-s", sub1])             # <<<<<<<<<<<<<<
@@ -1683,7 +1683,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __pyx_v_code = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "mas123.py":38
+    /* "natprov_ntp.py":38
  *     #    print("Time is out of sync & self correctng ")
  *         code =Popen(["date", "-s", sub1])
  *         code.communicate()             # <<<<<<<<<<<<<<
@@ -1712,7 +1712,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "mas123.py":39
+    /* "natprov_ntp.py":39
  *         code =Popen(["date", "-s", sub1])
  *         code.communicate()
  *         logging.basicConfig(format='%(asctime)s %(message)s',filename='clocksync-natprov.log',level=logging.INFO)             # <<<<<<<<<<<<<<
@@ -1741,7 +1741,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mas123.py":40
+    /* "natprov_ntp.py":40
  *         code.communicate()
  *         logging.basicConfig(format='%(asctime)s %(message)s',filename='clocksync-natprov.log',level=logging.INFO)
  *         logging.info('The clock was out of sync with the NTP server by -%s minutes ' , validate)             # <<<<<<<<<<<<<<
@@ -1800,7 +1800,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mas123.py":34
+    /* "natprov_ntp.py":34
  *     validate = rd.minutes
  * 
  *     if validate < -1 :             # <<<<<<<<<<<<<<
@@ -1810,7 +1810,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     goto __pyx_L3;
   }
 
-  /* "mas123.py":42
+  /* "natprov_ntp.py":42
  *         logging.info('The clock was out of sync with the NTP server by -%s minutes ' , validate)
  * 
  *     elif validate > 1 :             # <<<<<<<<<<<<<<
@@ -1822,7 +1822,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_7) {
 
-    /* "mas123.py":45
+    /* "natprov_ntp.py":45
  *     #    print(" %d hours, %d minutes and %d seconds" % (rd.hours, rd.minutes, rd.seconds))
  *     #    print("Time is out of sync & self correctng ")
  *         log = rd             # <<<<<<<<<<<<<<
@@ -1832,7 +1832,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_INCREF(__pyx_v_rd);
     __pyx_v_log = __pyx_v_rd;
 
-    /* "mas123.py":46
+    /* "natprov_ntp.py":46
  *     #    print("Time is out of sync & self correctng ")
  *         log = rd
  *         code =Popen(["date", "-s", sub1])             # <<<<<<<<<<<<<<
@@ -1901,7 +1901,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __pyx_v_code = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "mas123.py":47
+    /* "natprov_ntp.py":47
  *         log = rd
  *         code =Popen(["date", "-s", sub1])
  *         code.communicate()             # <<<<<<<<<<<<<<
@@ -1930,7 +1930,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "mas123.py":48
+    /* "natprov_ntp.py":48
  *         code =Popen(["date", "-s", sub1])
  *         code.communicate()
  *         logging.basicConfig(format='%(asctime)s %(message)s',filename='clocksync-natprov.log',level=logging.INFO)             # <<<<<<<<<<<<<<
@@ -1959,7 +1959,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mas123.py":49
+    /* "natprov_ntp.py":49
  *         code.communicate()
  *         logging.basicConfig(format='%(asctime)s %(message)s',filename='clocksync-natprov.log',level=logging.INFO)
  *         logging.info('The clock was out of sync with the NTP server by %s minutes' , validate)             # <<<<<<<<<<<<<<
@@ -2018,7 +2018,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "mas123.py":42
+    /* "natprov_ntp.py":42
  *         logging.info('The clock was out of sync with the NTP server by -%s minutes ' , validate)
  * 
  *     elif validate > 1 :             # <<<<<<<<<<<<<<
@@ -2028,7 +2028,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
     goto __pyx_L3;
   }
 
-  /* "mas123.py":51
+  /* "natprov_ntp.py":51
  *         logging.info('The clock was out of sync with the NTP server by %s minutes' , validate)
  *     else:
  *         print("Time is synced")             # <<<<<<<<<<<<<<
@@ -2038,7 +2038,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   }
   __pyx_L3:;
 
-  /* "mas123.py":14
+  /* "natprov_ntp.py":14
  * #https://stackoverflow.com/questions/12664295/ntp-client-in-python
  * #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
  * def test():             # <<<<<<<<<<<<<<
@@ -2055,7 +2055,7 @@ static PyObject *__pyx_pf_6mas123_test(CYTHON_UNUSED PyObject *__pyx_self) {
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("mas123.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("natprov_ntp.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_c);
@@ -2082,17 +2082,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_mas123(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_natprov_ntp(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_mas123},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_natprov_ntp},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "mas123",
+    "natprov_ntp",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -2149,9 +2149,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_log, __pyx_k_log, sizeof(__pyx_k_log), 0, 0, 1, 1},
   {&__pyx_n_s_logging, __pyx_k_logging, sizeof(__pyx_k_logging), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-  {&__pyx_n_s_mas123, __pyx_k_mas123, sizeof(__pyx_k_mas123), 0, 0, 1, 1},
-  {&__pyx_kp_s_mas123_py, __pyx_k_mas123_py, sizeof(__pyx_k_mas123_py), 0, 0, 1, 0},
   {&__pyx_n_s_minutes, __pyx_k_minutes, sizeof(__pyx_k_minutes), 0, 0, 1, 1},
+  {&__pyx_n_s_natprov_ntp, __pyx_k_natprov_ntp, sizeof(__pyx_k_natprov_ntp), 0, 0, 1, 1},
+  {&__pyx_kp_s_natprov_ntp_py, __pyx_k_natprov_ntp_py, sizeof(__pyx_k_natprov_ntp_py), 0, 0, 1, 0},
   {&__pyx_kp_s_ntp_ch2_1p_sys_comcast_net, __pyx_k_ntp_ch2_1p_sys_comcast_net, sizeof(__pyx_k_ntp_ch2_1p_sys_comcast_net), 0, 0, 1, 0},
   {&__pyx_n_s_ntplib, __pyx_k_ntplib, sizeof(__pyx_k_ntplib), 0, 0, 1, 1},
   {&__pyx_n_s_os, __pyx_k_os, sizeof(__pyx_k_os), 0, 0, 1, 1},
@@ -2181,7 +2181,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "mas123.py":16
+  /* "natprov_ntp.py":16
  * def test():
  *     c = ntplib.NTPClient()   #create a object of the class
  *     response = c.request('ntp-ch2-1p.sys.comcast.net')             # <<<<<<<<<<<<<<
@@ -2192,7 +2192,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "mas123.py":14
+  /* "natprov_ntp.py":14
  * #https://stackoverflow.com/questions/12664295/ntp-client-in-python
  * #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
  * def test():             # <<<<<<<<<<<<<<
@@ -2202,7 +2202,7 @@ static int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__3 = PyTuple_Pack(12, __pyx_n_s_c, __pyx_n_s_response, __pyx_n_s_isntp, __pyx_n_s_sub, __pyx_n_s_sub1, __pyx_n_s_isOS, __pyx_n_s_dt1, __pyx_n_s_dt2, __pyx_n_s_rd, __pyx_n_s_validate, __pyx_n_s_code, __pyx_n_s_log); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_mas123_py, __pyx_n_s_test, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(0, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_natprov_ntp_py, __pyx_n_s_test, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2309,11 +2309,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initmas123(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initmas123(void)
+__Pyx_PyMODINIT_FUNC initnatprov_ntp(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initnatprov_ntp(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_mas123(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_mas123(void)
+__Pyx_PyMODINIT_FUNC PyInit_natprov_ntp(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_natprov_ntp(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -2353,7 +2353,7 @@ bad:
 }
 
 
-static int __pyx_pymod_exec_mas123(PyObject *__pyx_pyinit_module)
+static int __pyx_pymod_exec_natprov_ntp(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -2374,7 +2374,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_mas123(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_natprov_ntp(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -2410,7 +2410,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("mas123", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("natprov_ntp", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -2429,14 +2429,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_mas123) {
+  if (__pyx_module_is_main_natprov_ntp) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "mas123")) {
-      if (unlikely(PyDict_SetItemString(modules, "mas123", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "natprov_ntp")) {
+      if (unlikely(PyDict_SetItemString(modules, "natprov_ntp", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -2457,7 +2457,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "mas123.py":4
+  /* "natprov_ntp.py":4
  * 
  * 
  * from time import ctime             # <<<<<<<<<<<<<<
@@ -2478,7 +2478,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mas123.py":5
+  /* "natprov_ntp.py":5
  * 
  * from time import ctime
  * import time , calendar , os, sys, logging, datetime             # <<<<<<<<<<<<<<
@@ -2510,7 +2510,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_datetime, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mas123.py":6
+  /* "natprov_ntp.py":6
  * from time import ctime
  * import time , calendar , os, sys, logging, datetime
  * from  clock_lib.dateutil import relativedelta             # <<<<<<<<<<<<<<
@@ -2531,7 +2531,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mas123.py":7
+  /* "natprov_ntp.py":7
  * import time , calendar , os, sys, logging, datetime
  * from  clock_lib.dateutil import relativedelta
  * from clock_lib import ntplib             # <<<<<<<<<<<<<<
@@ -2552,7 +2552,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "mas123.py":8
+  /* "natprov_ntp.py":8
  * from  clock_lib.dateutil import relativedelta
  * from clock_lib import ntplib
  * from subprocess import Popen, PIPE             # <<<<<<<<<<<<<<
@@ -2580,19 +2580,19 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mas123.py":14
+  /* "natprov_ntp.py":14
  * #https://stackoverflow.com/questions/12664295/ntp-client-in-python
  * #https://stackoverflow.com/questions/6574329/how-can-i-produce-a-human-readable-difference-when-subtracting-two-unix-timestam
  * def test():             # <<<<<<<<<<<<<<
  *     c = ntplib.NTPClient()   #create a object of the class
  *     response = c.request('ntp-ch2-1p.sys.comcast.net')
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6mas123_1test, 0, __pyx_n_s_test, NULL, __pyx_n_s_mas123, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_11natprov_ntp_1test, 0, __pyx_n_s_test, NULL, __pyx_n_s_natprov_ntp, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_1) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "mas123.py":1
+  /* "natprov_ntp.py":1
  * #!/opt/comcast/interpreters/python-3.3.2/bin/python3.3             # <<<<<<<<<<<<<<
  * 
  * 
@@ -2610,11 +2610,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init mas123", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init natprov_ntp", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init mas123");
+    PyErr_SetString(PyExc_ImportError, "init natprov_ntp");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
