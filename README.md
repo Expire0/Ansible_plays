@@ -4,3 +4,6 @@ various scripts and programs for performing server related tasks.
 
 ..
 https://docs.python.org/3/library/functions.html#enumerate
+
+
+Press V to switch to VISUAL LINE mode and highlight the lines you want to indent by pressing j. Then press > to indent them. So the complete command would be Vjjj>.
