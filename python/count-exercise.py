@@ -13,7 +13,8 @@ class Twit:
         if self.taz1 == 0 and self.taz2 == 0:
             print(str(self.check) + "- Foobar")
 
-
+## once the function is done. You will just need to run the below code and change the 
+## variable value of top as needed
 top = 100
 f = Twit()
 
