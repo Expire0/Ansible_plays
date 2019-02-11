@@ -20,3 +20,19 @@ f = Twit()
 for num in range(top):
     f.count3(num)
     f.count5()
+
+    
+ 
+
+
+#==============
+#original code
+#max = 100
+
+#for num in range(max):
+#    if num % 3 == 0:
+#        print "Foo"
+#    if num % 5 == 0:
+#        print "Bar"
+#    if num % 3 == 0 and num % 5 == 0:
+#        print "FooBar"
