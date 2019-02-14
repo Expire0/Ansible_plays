@@ -13,3 +13,8 @@ https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-controller-election.html
 
 Restful authenication 
 https://blog.miguelgrinberg.com/post/restful-authentication-with-flask
+
+
+ negative lookahead assertion.
+
+^((?!qa|int|dev|fwtftp|vlan|cnr|nae|lenn|cores|ccs|perf).)*$
