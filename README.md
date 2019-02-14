@@ -10,3 +10,6 @@ Press V to switch to VISUAL LINE mode and highlight the lines you want to indent
 
 Kafka documentation 
 https://jaceklaskowski.gitbooks.io/apache-kafka/kafka-controller-election.html
+
+Restful authenication 
+https://blog.miguelgrinberg.com/post/restful-authentication-with-flask
